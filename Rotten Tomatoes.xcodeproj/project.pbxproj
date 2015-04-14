@@ -11,6 +11,7 @@
 		CB2ECC1C1ADC8BAC0068D3B9 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2ECC1B1ADC8BAC0068D3B9 /* MovieDetailViewController.swift */; };
 		CB2ECC1E1ADC8D560068D3B9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2ECC1D1ADC8D560068D3B9 /* MoviesViewController.swift */; };
 		CB2ECC201ADC932D0068D3B9 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2ECC1F1ADC932D0068D3B9 /* MovieCell.swift */; };
+		CB39E1831ADCEFC2002556E4 /* RottenTomatoes walkthrough.gif in Resources */ = {isa = PBXBuildFile; fileRef = CB39E1821ADCEFC2002556E4 /* RottenTomatoes walkthrough.gif */; };
 		CBDFF03F1ADC6C8A0054C979 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDFF03E1ADC6C8A0054C979 /* AppDelegate.swift */; };
 		CBDFF0441ADC6C8A0054C979 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDFF0421ADC6C8A0054C979 /* Main.storyboard */; };
 		CBDFF0461ADC6C8A0054C979 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBDFF0451ADC6C8A0054C979 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		CB2ECC1D1ADC8D560068D3B9 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		CB2ECC1F1ADC932D0068D3B9 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		CB2ECC211ADC9A740068D3B9 /* Rotten Tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rotten Tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB39E1821ADCEFC2002556E4 /* RottenTomatoes walkthrough.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "RottenTomatoes walkthrough.gif"; path = "../RottenTomatoes walkthrough.gif"; sourceTree = "<group>"; };
 		CBDFF0391ADC6C8A0054C979 /* Rotten Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rotten Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDFF03D1ADC6C8A0054C979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDFF03E1ADC6C8A0054C979 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		CBDFF0301ADC6C8A0054C979 = {
 			isa = PBXGroup;
 			children = (
+				CB39E1821ADCEFC2002556E4 /* RottenTomatoes walkthrough.gif */,
 				CBDFF03B1ADC6C8A0054C979 /* Rotten Tomatoes */,
 				CBDFF0511ADC6C8B0054C979 /* Rotten TomatoesTests */,
 				CBDFF03A1ADC6C8A0054C979 /* Products */,
@@ -228,6 +231,7 @@
 			files = (
 				CBDFF0441ADC6C8A0054C979 /* Main.storyboard in Resources */,
 				CBDFF0491ADC6C8A0054C979 /* LaunchScreen.xib in Resources */,
+				CB39E1831ADCEFC2002556E4 /* RottenTomatoes walkthrough.gif in Resources */,
 				CBDFF0461ADC6C8A0054C979 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
