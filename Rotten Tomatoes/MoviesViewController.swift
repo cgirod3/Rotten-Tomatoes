@@ -11,25 +11,38 @@ import UIKit
 class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var failureView: UIView!
     
     var movies: [NSDictionary]! = [NSDictionary]()
+    var refreshControl: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.failureView.hidden = true
 
         var url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=nxu96vjy2huu9g3vd3kjfd2g")
         var request = NSURLRequest(URL: url!)
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            
-            var json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
-            self.movies = json["movies"] as! [NSDictionary]
-            self.tableView.reloadData()
-            MBProgressHUD.hideHUDForView(self.view, animated: true)
-            
+            if data == nil {
+                self.tableView.hidden = true
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                self.failureView.hidden = false
+            }else {
+                var json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
+                self.movies = json["movies"] as! [NSDictionary]
+                self.tableView.reloadData()
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+            }
         }
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,13 +13,15 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var pictureView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var labelView: UIView!
     
     var movie: NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.labelView.hidden = true
+
         titleLabel!.text = movie["title"] as? String
         synopsisLabel!.text = movie["synopsis"] as? String
         
@@ -37,7 +39,13 @@ class MovieDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onTouch(sender: AnyObject) {
+        if (self.labelView.hidden) {
+            self.labelView.hidden = false
+        }else {
+            self.labelView.hidden = true
+        }
+    }
     /*
     // MARK: - Navigation
 
