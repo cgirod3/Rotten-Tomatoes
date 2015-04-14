@@ -19,11 +19,13 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         var url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=nxu96vjy2huu9g3vd3kjfd2g")
         var request = NSURLRequest(URL: url!)
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             
             var json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
             self.movies = json["movies"] as! [NSDictionary]
             self.tableView.reloadData()
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
             
         }
         tableView.delegate = self
