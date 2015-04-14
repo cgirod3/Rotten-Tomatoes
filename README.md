@@ -28,6 +28,8 @@ In the future, I will definitely work on implementing them.
 
 ### Walkthrough
 
+![alt tag](https://github.com/cgirod3/Rotten-Tomatoes/blob/master/Rotten%20Tomatoes/RottenTomatoes%20walkthrough.gif)
+
 Credits
 ---------
 * [Rotten Tomatoes API](http://developer.rottentomatoes.com/docs/read/JSON)
